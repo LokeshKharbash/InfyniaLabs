@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { useToast } from "@/hooks/use-toast";
 import { useAuth } from "@/hooks/use-auth";
+import Link from "next/link";
 import React from "react";
 import { joinWaitlist, checkWaitlist } from "@/app/actions";
 
@@ -18,6 +19,18 @@ const products = [
       "Alerts for dues, negotiation windows, milestones",
     ],
     cta: <Button asChild className="w-full bg-gradient-to-r from-primary to-accent shadow-[0_8px_32px_rgba(0,0,0,0.25)] rounded-xl"><a href="https://beatmyemi.com" target="_blank" rel="noopener noreferrer">Get BeatMyEMI</a></Button>,
+  },
+  {
+    status: "Live",
+    name: "Brio Automation",
+    description: "AI-embedded tool for dealers to eliminate repetitive typing across multiple systems. Save once, fill everywhere.",
+    features: [
+      "Save Data from filled forms",
+      "Load Last Data with one click",
+      "Search by Frame No / Phone / Name",
+      "Reduce typing and avoid errors",
+    ],
+    cta: <Button asChild className="w-full bg-gradient-to-r from-primary to-accent shadow-[0_8px_32px_rgba(0,0,0,0.25)] rounded-xl"><Link href="/brio-privacy-policy">Privacy Policy</Link></Button>,
   },
   {
     status: "In Development — Early Next Year",
